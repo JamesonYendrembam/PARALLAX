@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Moonlight | Vanilla Javascript</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+    <header>
+        <a href="#" class="Moonlight">Moonlight</a>
+        <ul>
+            <li><a href="moonlight.html" class="active">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="Work.html">Work</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+        </ul> 
+    </header>
+   <section>
+    <img src="stars.png" id="stars">
+    <img src="moon.png" id="moon">
+    <img src="mountains_behind.png" id="mountains_behind">
+    <h2 id="text"> Moon Light</h2>
+    <a href="#sec" id="btn"> Explore </a>
+    <img src="mountains_front.png" id="mountains_front"> 
+   </section>
+   <div class="sec" id="sec">
+    
+    <h2> Parallex Scrolling Effect</h2>
+    <p> Parallax scrolling is a web design technique in which the website background moves at a slower pace than the foreground. This results in a 3D effect as visitors scroll down the site, adding a sense of depth and creating a more immersive browsing experience.
+    <br><br>Parallax is based on optical illusion. Since the human eye perceives objects that are close to us as larger than things farther away, we perceive distant objects as if they were moving more slowly.
+    The illusion has been long adopted into parallax across different mediums, fostering a realistic effect. Its first use was in traditional animation, dating back to as early as Disney’s Snow White and the Seven Dwarfs, and in video games such as Super Mario.<br><br></p> 
+    
+    <h2>How do I make a parallax website design?</h2>   
+    <p>There are a few different ways designers can create parallax website designs. The first is to dive into pure CSS to create it. If you want to follow this approach, you should use a container element and add a background image to this container. Then you should use the “background-attachment: fixed” CSS property to create the actual parallax effect.
+         Another approach is to use website builders to add parallax scrolling. Website builders like Wix, Elementor, or Squarespace allow you to create a parallax effect with minimal effort.</p><br><br>
+        
+         <h2>Why should I use parallax graphics?</h2>    
+    <p>There are two main reasons why designers should try parallax graphics:<br><br></p>
+        <h2>It helps tell a story</h2> 
+        <p>Parallax graphics are ideal for storytelling. Good design is all about communication—and when we design websites, we want to communicate with our visitors and tell a compelling story about our product, service, or brand. Parallax scrolling allows us to immerse our website visitors in unique online experiences. It’s even possible to create a one-page website where visitors can read an entire story about your product or brand without navigating to multiple pages.</p><br><br> 
+    <h2>It helps to improve user engagement</h2> 
+    <p> Parallax graphics can be used to improve user engagement. Reducing your website’s bounce rate is one of the goals to be conscientious of in web design. Bounce rate measures the percentage of site visitors who either hit the “back” button or close the tab after checking just one page of your website. High bounce rates hurt your search ranking, so any actions you can take to bring that rate down are worthwhile. A well-crafted parallax page gives the user the type of dynamic experience that tends to keep them on the page longer. </p>
+
+</div>
+<script>
+    let stars = document.getElementById('stars'); 
+    let moon = document.getElementById('moon'); 
+    let mountains_behind = document.getElementById('mountains_behind'); 
+    let text = document.getElementById('text'); 
+    let btn = document.getElementById('btn'); 
+    let mountains_front = document.getElementById('mountains_front'); 
+    let header= document.querySelector('header');
+window.addEventListener('scroll',function(){
+    let value = window.scrollY;
+    stars.style.left = value *0.25 + 'px';
+    moon.style.top = value * 1.05 + 'px';
+    mountains_behind.style.top = value * 0.5 + 'px';
+    mountains_front.style.top = value * 0 + 'px';
+    text.style.marginRight = value * 4 + 'px';
+    text.style.marginTop = value * 1.5 + 'px';
+    btn.style.marginTop = value * 1.5 + 'px';
+})
+    </script>
+</body>
+</html>
